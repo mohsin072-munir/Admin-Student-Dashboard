@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+<h1>Student Dashboard</h1>
+
+<h2>Profile</h2>
+
+<div class="profile-card">
+
+<img src="https://via.placeholder.com/120">
+
+<h3>Mohsin Munir</h3>
+<p><b>ID:</b> 077</p>
+<p><b>Course:</b> Web Lab</p>
+
+</div>
+
+<h2>Courses & Attendance</h2>
+
+<div class="course-box">
+
+<h3>Web Development</h3>
+<button onclick="markAttendance(this)">Mark Attendance</button>
+<p class="status"></p>
+
+</div>
+
+<div class="course-box">
+
+<h3>Database</h3>
+<button onclick="markAttendance(this)">Mark Attendance</button>
+<p class="status"></p>
+
+</div>
+
+<div class="course-box">
+
+<h3>Mobile App Development</h3>
+<button onclick="markAttendance(this)">Mark Attendance</button>
+<p class="status"></p>
+
+</div>
+
+</div>
+
+<script>
+function markAttendance(btn){
+
+let status = btn.nextElementSibling;
+status.innerText = "Present ✔";
+status.style.color = "green";
+
+btn.disabled = true;
+btn.innerText = "Marked";
+
+}
+</script>
+
+</body>
+</html>
